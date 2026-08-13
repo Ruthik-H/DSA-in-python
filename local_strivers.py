@@ -22,4 +22,5 @@ for num in nums:
         second_smallest=smallest 
         smallest=num
     elif num<second_smallest and num!=smallest:
+        second_smallest=num
         print(second_smallest)
