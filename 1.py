@@ -9,11 +9,11 @@
 #             print(i,j)
 
 # optimal solution 
-nums = [2,7,11,15]
-target = 9
-for i in range(len(nums)):
-    x=target-nums[i]
-    if x in nums:
-        if nums.index(x) > i:
-            print(i,nums.index(x))
-        
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        dict1={}
+        for i in range(len(nums)):
+            x=target-nums[i]
+            if x in dict1:
+                return [dict1[x],i]
+            dict1[nums[i]]=i
