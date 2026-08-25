@@ -6,7 +6,6 @@ for i in range(1,len(prices)):
     if prices[i]<min_price:
         min_price=prices[i]
     current_profit=prices[i]-min_price
-
     if current_profit>profit:
         profit=current_profit
 print(profit)
