@@ -3,7 +3,6 @@ m = [
     [5, 6, 7, 8],
     [9, 10, 11, 12]
 ]
-
 top = 0
 bottom = len(m) - 1
 left = 0
@@ -35,5 +34,5 @@ while top <= bottom and left <= right:
         for i in range(bottom, top - 1, -1):
             ans.append(m[i][left])
         left += 1
-
+        
 print(ans)
