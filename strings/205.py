@@ -13,7 +13,6 @@ for i ,ch in enumerate(s):
             break
         mapping[ch]=t[i]
         reverse_mapping[t[i]]=ch
-
 else:
     print("isomorphic")
     
