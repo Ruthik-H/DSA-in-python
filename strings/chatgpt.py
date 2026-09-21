@@ -9,5 +9,4 @@ for i in range(len(s)):
         sw=s[left:i+1]
     if len(sw)>max_len:
         max_len=len(sw)
-
 print(max_len)
