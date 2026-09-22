@@ -30,11 +30,6 @@ for i in range(len(nums)):
 print(max_count)
 
 
-
-
-
-
-
 # class Solution:
 #     def longestOnes(self, nums: list[int], k: int) -> int:
 #         left=0
