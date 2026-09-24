@@ -1,31 +1,32 @@
-s = "ADOBECODEBANC"
-t = "ABC"
-a=0
-b={}
-min_len=float('inf')
-min_window=""
-for i in range(len(t)):
-    if t[i] in b:
-        b[t[i]]+=1
-    else:
-        b[t[i]]=1
-for i in range(len(s)):
-    w_s=s[a:i+1]
-    c={}
-    for j in range(len(w_s)):
-        if w_s[j] in c:
-            c[w_s[j]]+=1
-        else:
-            c[w_s[j]]=1
-    valid=True
-    for ch in b:
-        if ch not in c or c[ch]<b[ch]:
-            valid=False
-            break
-    if valid:
-        if len(w_s)<min_len:
-            min_len=len(w_s)
-            min_window=w_s
-    else:
-        a+=1
-print(min_window)
+class Solution:
+    def minWindow(self, s: str, t: str) -> str:
+        a=0
+        b={}
+        for ch in t:
+            if ch in b:
+                b[ch]+=1
+            else:
+                b[ch]=1
+        c={}
+        formed=0
+        required=len(b)
+        min_len=float('inf')
+        min_window=""
+        for j in range(len(s)):
+            ch=s[j]
+            if ch in c:
+                c[ch]+=1
+            else:
+                c[ch]=1
+            if ch in b and c[ch]==b[ch]:
+                formed+=1
+            while formed==required:
+                if j-a+1<min_len:
+                    min_len=j-a+1
+                    min_window=s[a:j+1]
+                left_char=s[a]
+                c[left_char]-=1
+                if left_char in b and c[left_char]<b[left_char]:
+                    formed-=1
+                a+=1
+        return min_window
