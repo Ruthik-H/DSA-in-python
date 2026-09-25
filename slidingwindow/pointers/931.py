@@ -7,7 +7,19 @@ for i in range(len(nums)):
         if sum(w_s)==goal:
             count+=1
 print(count)
-            
-    
 
+# alternative solution of TC of O(n^2)     
+    
+# count = 0
+
+# for i in range(len(nums)):
+#     current_sum = 0
+
+#     for j in range(i, len(nums)):
+#         current_sum += nums[j]
+
+#         if current_sum == goal:
+#             count += 1
+
+# print(count)
     
