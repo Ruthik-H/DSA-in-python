@@ -11,4 +11,4 @@ while a < b:
         c[a], c[b] = c[b], c[a]
         a += 1
         b -= 1
-print("".join(c))
+print(int("".join(c)))
