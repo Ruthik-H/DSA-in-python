@@ -1,7 +1,7 @@
 n = 4
 a=[1]
 while len(a)<=n:
-    temp=[]
+    temp=[] # this resets in every iteartion 
     for x in a:
         if 2*x-1<=n:
             temp.append(2*x-1)
